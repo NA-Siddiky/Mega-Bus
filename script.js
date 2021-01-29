@@ -19,12 +19,12 @@
 // })
 
 
-document.getElementById("firstClass-decrease").addEventListener('click', function () {
-    ticketHandler(false);
-})
-document.getElementById("firstClass-increase").addEventListener('click', function () {
-    ticketHandler(true);
-});
+// document.getElementById("firstClass-decrease").addEventListener('click', function () {
+//     ticketHandler(false);
+// })
+// document.getElementById("firstClass-increase").addEventListener('click', function () {
+//     ticketHandler(true);
+// });
 
 function ticketHandler(isIncrease) {
     const firstClassInput = document.getElementById("firstClass-count");
@@ -34,7 +34,7 @@ function ticketHandler(isIncrease) {
     if (isIncrease == true) {
         firstClassNewCount = firstClassCount + 1;
     }
-    if (isIncrease == false) {
+    if (isIncrease == false && firstClassCount > 0) {
         firstClassNewCount = firstClassCount - 1;
     }
     firstClassInput.value = firstClassNewCount;
