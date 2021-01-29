@@ -26,20 +26,44 @@
 //     ticketHandler(true);
 // });
 
-function ticketHandler(isIncrease) {
-    const firstClassInput = document.getElementById("firstClass-count");
-    const firstClassCount = parseInt(firstClassInput.value);
-    // const firstClassNewCount = firstClassCount + 1;
-    let firstClassNewCount = firstClassCount;
+// function ticketHandler(isIncrease) {
+//     const firstClassInput = document.getElementById("firstClass-count");
+//     const firstClassCount = parseInt(firstClassInput.value);
+//     // const firstClassNewCount = firstClassCount + 1;
+//     let firstClassNewCount = firstClassCount;
+//     if (isIncrease == true) {
+//         firstClassNewCount = firstClassCount + 1;
+//     }
+//     if (isIncrease == false && firstClassCount > 0) {
+//         firstClassNewCount = firstClassCount - 1;
+//     }
+//     firstClassInput.value = firstClassNewCount;
+//     const firstClassTotal = firstClassNewCount * 150;
+//     document.getElementById('allClass-total').innerText = '$' + firstClassTotal;
+
+// }
+
+function ticketHandler(travelClass, isIncrease) {
+    const ticketInput = document.getElementById(travelClass + "-count");
+    const ticketCount = parseInt(ticketInput.value);
+
+    let ticketNewCount = ticketCount;
     if (isIncrease == true) {
-        firstClassNewCount = firstClassCount + 1;
+        ticketNewCount = ticketCount + 1;
     }
-    if (isIncrease == false && firstClassCount > 0) {
-        firstClassNewCount = firstClassCount - 1;
+    if (isIncrease == false && ticketCount > 0) {
+        ticketNewCount = ticketCount - 1;
     }
-    firstClassInput.value = firstClassNewCount;
-    const firstClassTotal = firstClassNewCount * 150;
-    document.getElementById('firstClass-total').innerText = '$' + firstClassTotal;
+    ticketInput.value = ticketNewCount;
+    let totalTicket = 0;
+    if (travelClass == 'firstClass') {
+        totalTicket = ticketNewCount * 150;
+    }
+    if (travelClass == 'economyClass') {
+        totalTicket = ticketNewCount * 100;
+    }
+
+    document.getElementById(travelClass + '-total').innerText = '$' + totalTicket;
 
 }
 

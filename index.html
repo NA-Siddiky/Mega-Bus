@@ -68,13 +68,12 @@
                     <div>
                         <label for="">First Class ($150)</label>
                         <input id="firstClass-count" class="inp-style inp-width" type="number" value="0">
-
-                        <!-- <input id="case-count" type="text" class="form-control text-center" value="1"> -->
-
                     </div>
                     <div class="plus-minus-btn">
-                        <button onclick="ticketHandler(false)" type="button" class="btn btn-danger"><b>-</b></button>
-                        <button onclick="ticketHandler(true)" type="button" class="btn btn-success"><b>+</b></button>
+                        <button onclick="ticketHandler('firstClass', false)" type="button"
+                            class="btn btn-danger"><b>-</b></button>
+                        <button onclick="ticketHandler('firstClass', true)" type="button"
+                            class="btn btn-success"><b>+</b></button>
 
                     </div>
                 </div>
@@ -84,8 +83,10 @@
                         <input id="economyClass-count" class="inp-style inp-width" type="number" value="0">
                     </div>
                     <div class="plus-minus-btn">
-                        <button id="economyClass-decrease" type="button" class="btn btn-danger"><b>-</b></button>
-                        <button id="economyClass-increase" type="button" class="btn btn-success"><b>+</b></button>
+                        <button onclick="ticketHandler('economyClass', false)" type="button"
+                            class="btn btn-danger"><b>-</b></button>
+                        <button onclick="ticketHandler('economyClass', true)" type="button"
+                            class="btn btn-success"><b>+</b></button>
                     </div>
                 </div>
             </div>
@@ -96,7 +97,7 @@
                     </div>
                     <div class="right">
                         <!-- var total = firstClass-total + economyClass-total -->
-                        <p id="firstClass-total">$0</p>
+                        <p id="economyClass-total">$0</p>
                     </div>
                 </div>
 
