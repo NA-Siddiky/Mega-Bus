@@ -72,7 +72,6 @@ function calculateTotal(){
 document.getElementById('')
 }
 
-
 // document.getElementById("firstClass-decrease").addEventListener('click', function () {
 //     console.log('minus clicked');
 // })
