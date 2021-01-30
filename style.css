@@ -134,7 +134,7 @@ a.active {
   background: linear-gradient(340deg, #055d75, white);
   text-decoration: solid;
   text-align: center;
-  margin: 100px;
+  margin: 100px auto;
   padding: 100px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px gray;
