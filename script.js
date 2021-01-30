@@ -1,3 +1,5 @@
+// function for Ticket class /
+
 function ticketClassHandler(ticketClass, isIncrease) {
     const ticketClassInput = document.getElementById(ticketClass + "-count");
     const ticketClassCount = parseInt(ticketClassInput.value);
@@ -21,6 +23,8 @@ function ticketClassHandler(ticketClass, isIncrease) {
     calculateTotal();
 }
 
+// function for calculating Sub Total, Tax, & Grand Total /
+
 function calculateTotal() {
     const firstClassCount = getInputValue('firstClass');
     const economyClassCount = getInputValue('economyClass');
@@ -36,11 +40,15 @@ function calculateTotal() {
 
 }
 
+// function for returning input value /
+
 function getInputValue(ticketClass) {
     const ticketClassInput = document.getElementById(ticketClass + '-count');
     const ticketClassCount = parseInt(ticketClassInput.value);
     return ticketClassCount;
 }
+
+// Page Transformation /
 
 const bookNowBtn = document.getElementById("book-now");
 bookNowBtn.addEventListener('click', function () {

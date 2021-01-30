@@ -6,6 +6,8 @@
   list-style-type: none;
 }
 
+/* predefine styles */
+
 body {
   font-family: "Roboto", sans-serif;
   background: url("images/bus.png");
@@ -124,6 +126,8 @@ a.active {
   display: flex;
   justify-content: space-between;
 }
+
+/* Style for Page transformation */
 
 #submit-area {
   display: none;
