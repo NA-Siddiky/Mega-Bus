@@ -70,10 +70,10 @@
                         <input id="firstClass-count" class="inp-style inp-width" type="number" value="0">
                     </div>
                     <div class="plus-minus-btn">
-                        <button onclick="ticketHandler('firstClass', false)" type="button"
+                        <button onclick="ticketClassHandler('firstClass', false)" type="button"
                             class="btn btn-danger"><b>-</b>
                         </button>
-                        <button onclick="ticketHandler('firstClass', true)" type="button"
+                        <button onclick="ticketClassHandler('firstClass', true)" type="button"
                             class="btn btn-success"><b>+</b>
                         </button>
                     </div>
@@ -84,10 +84,10 @@
                         <input id="economyClass-count" class="inp-style inp-width" type="number" value="0">
                     </div>
                     <div class="plus-minus-btn">
-                        <button onclick="ticketHandler('economyClass', false)" type="button"
+                        <button onclick="ticketClassHandler('economyClass', false)" type="button"
                             class="btn btn-danger"><b>-</b>
                         </button>
-                        <button onclick="ticketHandler('economyClass', true)" type="button"
+                        <button onclick="ticketClassHandler('economyClass', true)" type="button"
                             class="btn btn-success"><b>+</b>
                         </button>
                     </div>
@@ -99,8 +99,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <!-- var total = firstClass-total + economyClass-total -->
-                        <p id="economyClass-total">$0</p>
+                        <p id="sub-total">$0</p>
                     </div>
                 </div>
 
@@ -124,10 +123,9 @@
             </div>
             <button class="btn-style">Book Now</button>
         </div>
-        <!-- JavaScript -->
-        <script src="script.js"></script>
     </main>
-    <!--Thank You-->
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>
