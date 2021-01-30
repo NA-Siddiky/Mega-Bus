@@ -42,3 +42,11 @@ function getInputValue(ticketClass) {
     return ticketClassCount;
 }
 
+const bookNowBtn = document.getElementById("book-now");
+bookNowBtn.addEventListener('click', function () {
+    const ticketArea = document.getElementById("ticket-area");
+    ticketArea.style.display = "none";
+    const submitArea = document.getElementById("submit-area");
+    submitArea.style.display = "block";
+})
+
