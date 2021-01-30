@@ -62,11 +62,15 @@ function ticketHandler(travelClass, isIncrease) {
     if (travelClass == 'economyClass') {
         totalTicket = ticketNewCount * 100;
     }
-
+    // if (travelClass == 'totalClass') {
+    //     totalTicket = ticketNewCount * 200;
+    // }
     document.getElementById(travelClass + '-total').innerText = '$' + totalTicket;
-
 }
 
+function calculateTotal(){
+document.getElementById('')
+}
 
 
 // document.getElementById("firstClass-decrease").addEventListener('click', function () {
