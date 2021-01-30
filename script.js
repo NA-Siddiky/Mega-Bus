@@ -128,6 +128,22 @@
 //     console.log('pulse clicked');
 // })
 
+// function calculateTotal() {
+//     const firstClassInput = document.getElementById('firstClass-count');
+//     const firstClassCount = parseInt(firstClassInput.value);
+
+//     const economyClassInput = document.getElementById('economyClass-count');
+//     const economyClassCount = parseInt(economyClassInput.value);
+
+//     const subTotal = firstClassCount * 150 + economyClassCount * 100;
+//     document.getElementById('sub-total').innerText = '$' + subTotal;
+//     console.log('sub-total');
+// }
+
+
+
+
+
 
 
 
@@ -163,13 +179,26 @@ function ticketClassHandler(ticketClass, isIncrease) {
     calculateTotal();
 }
 
-function calculateTotal() {
-    const firstClassInput = document.getElementById('firstClass-count');
-    const firstClassCount = parseInt(firstClassInput.value);
 
-    const economyClassInput = document.getElementById('economyClass-count');
-    const economyClassCount = parseInt(economyClassInput.value);
+function calculateTotal() {
+    const firstClassCount = getInputValue('firstClass');
+    const economyClassCount = getInputValue('economyClass');
 
     const subTotal = firstClassCount * 150 + economyClassCount * 100;
     document.getElementById('sub-total').innerText = '$' + subTotal;
+
+    const tax = Math.round(subTotal * 10);
+    document.getElementById('tax-amount').innerText = '$' + tax;
+
+    const grandTotal = subTotal + tax;
+    document.getElementById('grand-total').innerText = '$' + grandTotal;
+
 }
+
+
+function getInputValue(ticketClass) {
+    const ticketClassInput = document.getElementById(ticketClass + '-count');
+    const ticketClassCount = parseInt(ticketClassInput.value);
+    return ticketClassCount;
+}
+
